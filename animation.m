@@ -3,14 +3,16 @@ function animation(img, hough)
     colormap gray
     dif = size(hough,1) - size(img,1);
     offset = (dif-1)/2 + 1;
-    idx = 1;
+    alpha = 0.9;
     for rad=1:size(hough,3)
         if sum(sum(hough(:,:,rad))) == 0
             continue
         end
-        M = squeeze(hough(offset:end-offset,offset:end-offset,rad))*0.8 + double(img)*0.2;
+        M = squeeze(hough(offset:end-offset,offset:end-offset,rad))*alpha + double(img)*(1-alpha);
         imagesc(M); 
-        mov(idx) = getframe;
-        idx=idx+1;
+        pause(1.0/10);
+        %mov(idx) = getframe;
+        %idx=idx+1;
     end
-    movie(mov)
+    %length(mov)
+    %movie(mov)
