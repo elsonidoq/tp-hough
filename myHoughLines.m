@@ -1,5 +1,5 @@
 function A = myHoughLines(M, thetas, rho_resulution)
-    [xs ys vs] = find(M);
+    [xs ys] = find(M);
 
     Thetas = repmat(thetas, length(xs), 1);
     Xs = repmat(xs, 1, length(thetas));
