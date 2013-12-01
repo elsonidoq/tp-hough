@@ -1,6 +1,6 @@
 function [X Y R A] = hough_circle(I, min_radius, max_radius, factor)
     if nargin < 2
-        min_radius = 10;
+        min_radius = 12;
         max_radius = min(size(I, 1), size(I, 2));
     end
     if nargin < 4
