@@ -7,7 +7,7 @@ function animate_circle(I, min_radius, max_radius)
     for rad = 1:size(A, 3)
         M = squeeze(A(:, :, rad)) * alpha + I * (1 - alpha);
         imagesc(M); 
-        pause(1.0 / 10);
+        pause(0.1);
         ind = find(R==min_radius + rad - 1);
         if size(ind, 1) > 0
             M(X(ind), :) = 100;
