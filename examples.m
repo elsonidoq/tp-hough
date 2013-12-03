@@ -1,1 +1,1 @@
-process_circles('chingycl5.bmp', 12, 24)
+process_circles('chingycl5.bmp', 12, 35)
