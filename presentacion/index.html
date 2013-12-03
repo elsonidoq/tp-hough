@@ -1,78 +1,78 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Transformada de Hough</title>
-		<meta name="description" content="Detección de iris con Transformada de Hough">
-		<meta name="author" content="Bottaro, Zivic">
+    <head>
+        <meta charset="utf-8">
+        <title>Transformada de Hough</title>
+        <meta name="description" content="Detección de iris con Transformada de Hough">
+        <meta name="author" content="Bottaro, Zivic">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+        <script>
+        document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
-		<div class="reveal">
-			<div class="slides">
+    <body>
+        <div class="reveal">
+            <div class="slides">
                 <!-- CARAS JP -->
-				<section>
-					<h1>Reconocimiento de Caras</h1>
-					<h3>Uso de PCA para análisis de imagenes</h3>
-					<p>
-						<small>Presentado por <a href="mailto:jpbottaro@gmail.com">Juan Pablo Bottaro</a></small>
-					</p>
-				</section>
+                <section>
+                    <h1>Reconocimiento de Caras</h1>
+                    <h3>Uso de PCA para análisis de imagenes</h3>
+                    <p>
+                    <small>Presentado por <a href="mailto:jpbottaro@gmail.com">Juan Pablo Bottaro</a></small>
+                    </p>
+                </section>
 
-				<section>
-					<h2>Pasos del Método</h2>
-					<ul>
+                <section>
+                    <h2>Pasos del Método</h2>
+                    <ul>
                         <li>Analizar con <span style="color:red">PCA</span> caras de entrenamiento</li>
-						<li>Extraer <span style="color:orange">autocaras</span> que mejor expliquen variación</li>
-						<li>Definir y ajustar con caras de test <span style="color:green">umbral de distancia</span></li>
-					</ul>
-				</section>
+                        <li>Extraer <span style="color:orange">autocaras</span> que mejor expliquen variación</li>
+                        <li>Definir y ajustar con caras de test <span style="color:green">umbral de distancia</span></li>
+                    </ul>
+                </section>
 
-				<section>
-					<h2>Ejemplos de entrenamiento</h2>
+                <section>
+                    <h2>Ejemplos de entrenamiento</h2>
                     <img src="img/caras/ej1.png">
                     <img src="img/caras/ej2.png">
                     <img src="img/caras/ej3.png">
                     <img src="img/caras/ej4.png">
                     <img src="img/caras/ej5.png">
-					<h2>Cara Promedio</h2>
+                    <h2>Cara Promedio</h2>
                     <img width="320" height="300" src="img/caras/promedio.png">
-				</section>
+                </section>
 
-				<section>
-					<h2>Autocaras (25 más significativas)</h2>
+                <section>
+                    <h2>Autocaras (25 más significativas)</h2>
                     <img height="550" src="img/caras/autocaras.png">
-				</section>
+                </section>
 
-				<section>
-					<h2>Proyectando caras</h2>
+                <section>
+                    <h2>Proyectando caras</h2>
                     <img height="550" src="img/caras/proyeccion.png">
-				</section>
+                </section>
 
-				<section>
-					<h2>Ajustando distancias</h2>
+                <section>
+                    <h2>Ajustando distancias</h2>
                     <img height="500" src="img/caras/distancias.png">
                     <p>Usamos el set de test s37-s41</p>
-				</section>
+                </section>
 
-				<section>
+                <section>
                     <h2>Un poco de realidad</h2>
                     <p>Caras no ideales</p>
                     <img src="img/caras/1.png">
@@ -86,103 +86,103 @@
                     <img src="img/caras/no3.png">
                     <img src="img/caras/no4.png">
                     <img src="img/caras/no5.png">
-				</section>
+                </section>
 
-				<section>
+                <section>
                     <h2>Resultado</h2>
                     <p>Reajustamos umbral con caras poco ideales</p>
                     <img height="500" src="img/caras/realidad.png">
-				</section>
+                </section>
 
 
                 <!-- CARAS Pablo -->
 
-				<section>
-					<h1>Más sobre Caras</h1>
-					<p>
-						<small>Presentado por <a href="mailto:elsonidoq@gmail.com">Pablo Rodriguez Zivic</a></small>
-					</p>
-				</section>
+                <section>
+                    <h1>Más sobre Caras</h1>
+                    <p>
+                    <small>Presentado por <a href="mailto:elsonidoq@gmail.com">Pablo Rodriguez Zivic</a></small>
+                    </p>
+                </section>
 
                 <!-- HOUGH -->
 
-				<section>
-					<h1>Transformada de Hough</h1>
-					<h3>Aplicaciones para detección de iris</h3>
-					<p>
-						<small>Presentado por <a href="mailto:jpbottaro@gmail.com">Juan Pablo Bottaro</a> y
-                                              <a href="mailto:elsonidoq@gmail.com">Pablo Rodriguez Zivic</a></small>
-					</p>
-				</section>
+                <section>
+                    <h1>Transformada de Hough</h1>
+                    <h3>Aplicaciones para detección de iris</h3>
+                    <p>
+                    <small>Presentado por <a href="mailto:jpbottaro@gmail.com">Juan Pablo Bottaro</a> y
+                        <a href="mailto:elsonidoq@gmail.com">Pablo Rodriguez Zivic</a></small>
+                    </p>
+                </section>
 
-				<section>
-					<h2>Pasos del Método</h2>
-					<ul>
+                <section>
+                    <h2>Pasos del Método</h2>
+                    <ul>
                         <li>Obtener bordes con <span style="color:red">Canny/Sobel/Roberts/etc.</span></li>
-						<li>Tomar cada <span style="color:orange">punto borde</span> como <span style="color:orange">centro de un circulo</span> de radio variable.</li>
-						<li>Tomar los puntos con <span style="color:green">más intercecciones de círculos</span> como centro de los posibles iris.</li>
-					</ul>
-				</section>
+                        <li>Tomar cada <span style="color:orange">punto borde</span> como <span style="color:orange">centro de un circulo</span> de radio variable.</li>
+                        <li>Tomar los puntos con <span style="color:green">más intercecciones de círculos</span> como centro de los posibles iris.</li>
+                    </ul>
+                </section>
 
-				<!--section>
-					<h2>Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+                <section>
+                    <h2>Imagen original</h2>
+                    <img src="img/hough/ojo.bmp">
+                    <h2>Bordes con Canny</h2>
+                    <img src="img/hough/bordes.png">
+                </section>
 
-    var nodes = document.querySelectorAll( selector );
+                <section>
+                    <h2>Idea para detectar círculo</h2>
+                    <img src="img/hough/idea-circulo.png">
+                </section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+                <section>
+                    <h2>Buscando circulos</h2>
+                    <img src="img/hough/buscando-circulo.gif">
+                </section>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-				</section-->
+                <section>
+                    <h2>Resultado</h2>
+                    <img src="img/hough/resultado.png">
+                </section>
 
-				<section>
-					<h1>THE END</h1>
-				</section>
+                <section>
+                    <h1>THE END</h1>
+                </section>
 
-			</div>
+            </div>
 
-		</div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
 
-		<script>
+        <script>
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-	</body>
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+        </script>
+    </body>
 </html>
