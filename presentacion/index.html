@@ -27,6 +27,68 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+                <!-- CARAS JP -->
+				<section>
+					<h1>Reconocimiento de Caras</h1>
+					<h3>Uso de PCA para análisis de imagenes</h3>
+					<p>
+						<small>Presentado por <a href="mailto:jpbottaro@gmail.com">Juan Pablo Bottaro</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Pasos del Método</h2>
+					<ul>
+                        <li>Analizar con <span style="color:red">PCA</span> caras de entrenamiento</li>
+						<li>Extraer <span style="color:orange">autocaras</span> que mejor expliquen variación</li>
+						<li>Definir y ajustar con caras de test <span style="color:green">umbral de distancia</span></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Ejemplos de entrenamiento</h2>
+                    <img src="img/caras-ej1.png">
+                    <img src="img/caras-ej2.png">
+                    <img src="img/caras-ej3.png">
+                    <img src="img/caras-ej4.png">
+                    <img src="img/caras-ej5.png">
+					<h2>Cara Promedio</h2>
+                    <img width="320" height="300" src="img/caras-promedio.png">
+				</section>
+
+				<section>
+					<h2>Autocaras (25 más significativas)</h2>
+                    <img height="550" src="img/caras-autocaras.png">
+				</section>
+
+				<section>
+					<h2>Proyectando caras</h2>
+                    <img height="550" src="img/caras-proyeccion.png">
+				</section>
+
+				<section>
+					<h2>Ajustando distancias</h2>
+                    <img height="500" src="img/caras-distancias.png">
+                    <p>Usamos el set de test s37-s41</p>
+				</section>
+
+				<section>
+                    <h2>Un poco de realidad</h2>
+                    <p>Reajustamos umbral con caras poco ideales</p>
+                    <img height="500" src="img/caras-realidad.png">
+				</section>
+
+                <!-- CARAS Pablo -->
+
+				<section>
+					<h1>Más sobre Caras</h1>
+					<p>
+						<small>Presentado por <a href="mailto:elsonidoq@gmail.com">Pablo Rodriguez Zivic</a></small>
+					</p>
+				</section>
+
+                <!-- HOUGH -->
+
 				<section>
 					<h1>Transformada de Hough</h1>
 					<h3>Aplicaciones para detección de iris</h3>
