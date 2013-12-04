@@ -19,8 +19,7 @@ function [px py pr1 pr2] = iris_prunning(X,Y,R)
             pr(length(pr)+1) = R(i);
         end
     end
-            
-    
+
     pr1=pr; pr2=pr;
     X = px;
     Y = py;
@@ -36,7 +35,7 @@ function [px py pr1 pr2] = iris_prunning(X,Y,R)
         center1 = [X(i) Y(i)];
         r1 = R(i);
         for j = 1:length(X)
-            if i == j 
+            if i == j
                 continue
             end
             center2 = [X(j) Y(j)];
@@ -46,7 +45,6 @@ function [px py pr1 pr2] = iris_prunning(X,Y,R)
                 py(length(py)+1) = Y(i);
                 pr1(length(pr1)+1) = r1;
                 pr2(length(pr2)+1) = r2;
-                
             end
         end
     end
