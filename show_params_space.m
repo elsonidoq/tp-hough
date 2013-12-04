@@ -42,6 +42,4 @@ for i=1:length(fnames)
 
    out_fname = fullfile(basedir, strcat('result_',fnames(i).name,'.png'));
    print('-painters', '-dpng', out_fname);
-
 end
-
