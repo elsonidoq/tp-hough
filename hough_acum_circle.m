@@ -12,7 +12,13 @@ function A = hough_acum_circle(M, min_radius, max_radius)
     for i=1:length(xs)
         x = xs(i);
         y = ys(i);
-        idx = sub2ind(size(A), cx+x+1, cy+y+1, cr-min_radius+1);
+
+        xidx = cx+x+1;
+        yidx = cy+y+1;
+        ridx = cr-min_radius+1;
+        mask = xidx > 0 & xidx < size(A,1) & yidx > 0 & yidx < size(A,2); 
+        idx = sub2ind(size(A), xidx(mask), yidx(mask), ridx(mask));
+
         A(idx) = 1 + A(idx);
     end
     A = A(max_radius:n+max_radius-1, max_radius:m+max_radius-1, :);
