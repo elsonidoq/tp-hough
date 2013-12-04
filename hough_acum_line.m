@@ -1,4 +1,4 @@
-function A = hough_acum_line(M, thetas, rho_resolution)
+function [A rhos] = hough_acum_line(M, thetas, rho_resolution)
     [xs ys] = find(M);
 
     Thetas = repmat(thetas, length(xs), 1);

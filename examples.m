@@ -1,1 +1,1 @@
-process_circles('ojo.png', 12, 35)
+process_circles('ojo.png', 12, 100)
