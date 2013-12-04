@@ -7,7 +7,7 @@ function [X Y R A] = hough_circle(I, min_radius, max_radius, factor)
         factor = 0.55;
     end
 
-    borders = edge(I, 'canny');
+    borders = edge(I, 'canny', [0.08 0.15]);
     borders = imdilate(borders,strel('square',2));
     A = hough_acum_circle(borders, min_radius, max_radius);
 
