@@ -104,6 +104,39 @@
                     </p>
                 </section>
 
+                <section>
+                    <h1>PCA no es la única</h1>
+                    <p></p>
+                    <p>Si los datos son <strong>no-negativos</strong>,</p>  
+                    <p>querríamos que <strong>la descomposición también</strong> lo sea</p>
+
+                </section>
+
+                <section>
+                    <h1>PCA</h1>
+                    <p> <small>Con mi dataset</small> </p>
+                    <p></p>
+                    <img height="500" src="img/caras/eigen-faces.png">
+                </section>
+
+                <section>
+                    <h1>NMF</h1>
+                    <p></p>
+                    <img height="500" src="img/caras/nmf-faces.png">
+                </section>
+
+                <section>
+                    <h1>NMF Ortogonal</h1>
+                    <p></p>
+                    <img height="500" src="img/caras/orth-faces.png">
+                </section>
+
+                <section>
+                    <h1>Y como anda?</h1>
+                    <p></p>
+                    <img height="500" src="img/caras/results_knn.png">
+                </section>
+
                 <!-- HOUGH -->
 
                 <section>
@@ -141,6 +174,19 @@
                 </section>
 
                 <section>
+                    <h2>Elección del threshold</h2>
+                    <p> Consideramos que A(x,y,r) es un círculo, si</p>
+                    <p> $A(x,y,r) > 2\times\pi\times r\times f$</p>
+                    <img height=500 src="img/hough/acumulator_plot.png">
+                </section>
+
+                <section>
+                    <h2>Detección de iris</h2>
+                    <p> Descartamos </strong>círculos repetidos </strong></p>
+                    <p> Buscamos </strong>círculos concéntricos</strong></p>
+                </section>
+
+                <section>
                     <h2>Resultado</h2>
                     <img src="img/hough/resultado.png">
                 </section>
@@ -172,6 +218,7 @@
                 dependencies: [
                     { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/math/math.js', async: true },
                 ]
             });
         </script>
